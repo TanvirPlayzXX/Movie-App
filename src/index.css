@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .bodys::-webkit-scrollbar {
+        display: none;
+    }
+    .bodys{
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .linear{
+        background: linear-gradient(to right, #fff, transparent);
+    }
+}
