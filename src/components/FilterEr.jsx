@@ -19,12 +19,12 @@ const FilterEr = ({filter,title,typed}) => {
 
     if(typed == "drama"){
       
-    return (<div className=' mx-20 m-10 z-20 box-border '>
+    return (<div className=' mx-20 m-7 z-20 box-border '>
         
       <span className='font-Poppins text-3xl text-white font-semibold py-10 block'>{title}</span>
       <Swiper
   slidesPerView={3}
-  spaceBetween={200}
+  spaceBetween={400}
   pagination={{
     clickable: true,
   }}
@@ -48,12 +48,12 @@ const FilterEr = ({filter,title,typed}) => {
 );
     }
     else if(typed == "movie"){
-      return (<div className=' mx-20 m-10 z-20 box-border '>
+      return (<div className=' mx-20 m-7 z-20 box-border '>
         
         <span className='font-Poppins text-3xl text-white font-semibold py-10 block'>{title}</span>
         <Swiper
     slidesPerView={3}
-    spaceBetween={-200}
+    spaceBetween={100}
     pagination={{
       clickable: true,
     }}
