@@ -1,9 +1,24 @@
+import { useEffect, useRef, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { LuBell } from "react-icons/lu";
 import { NavLink } from 'react-router-dom';
-
+import { movies } from "../../data";
 
 const SmallNav = () => {
+
+
+
+let [de,setDe] = useState(false)
+let [s,setS] = useState("")
+console.log(s)
+
+let sData = movies.filter((value)=>{
+ return value.title.toLowerCase().includes(s.toLowerCase())   || value.tag.toLowerCase().includes(s.toLowerCase())   
+})
+
+
+
+
     return (
         
     <nav className="flex justify-between text-lg absolute z-10 w-[95%] top-7 right-10 text-white">
@@ -16,8 +31,30 @@ const SmallNav = () => {
 
             <div className="basis-1/2 flex justify-end">
 
-                    <div className="flex text-2xl">                
-                        <FiSearch className="mx-2 cursor-pointer hover:text-slate-300" />
+                    <div className="flex text-2xl">           
+                        <div  className="relative">
+                        <FiSearch onClick={()=>setDe(!de)} className={` ${de ? "bg-white text-purple-900 hover:text-purple-800 rounded-full" : ""} mx-2 cursor-pointer hover:text-slate-300`} />
+                        
+                        <div className={` ${ de  ? "opacity-100" : "opacity-0" } transition-all absolute bottom-0 right-full  `} >
+                        <input  value={s} onChange={(e)=>setS(e.target.value)} type="text" placeholder="Search Here" className="rounded-3xl block p-2 backdrop-blur-md bg-white/5 focus:outline-none" />
+                            <div className={`${s !== "" ? "block" : "hidden"}  absolute top-full p-2 rounded-2xl overflow-y-scroll bg-white text-black h-96 w-full`}>
+                                {
+                                    sData.map((value,i)=>{
+                                        return <div key={i} className="flex cursor-pointer overflow-hidden rounded-2xl text-center  font-Poppins my-1 p-2 bg-slate-200">
+                                            <div className="basis-2/5"><img className="w-full h-24 rounded-2xl " src={value.img} alt="Product" /></div>
+                                            <div className="basis-3/5">
+                                            <p>{value.title}</p>
+                                            <p className="text-sm">{value.desc}</p>
+                                            </div>
+                                        </div>
+                                    })
+                                }
+                            </div>
+                        </div>
+                        
+                        </div>
+                        
+                        
                         <LuBell className="mx-2 cursor-pointer hover:text-slate-300" />
                     </div>
 

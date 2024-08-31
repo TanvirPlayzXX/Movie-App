@@ -12,7 +12,7 @@ const MovieCard = ({movie}) => {
 
                 <MoveLove id={id} />
 
-            <div className="h-[6rem] p-4 w-[30rem] absolute bottom-0 backdrop-blur-md linear">
+                <div className="h-[6rem] p-4 w-[30rem] absolute bottom-0 backdrop-blur-md linear">
         <h2 className=" font-semibold mb-2 text-xl">{title}</h2>
         <p className=" text-md">{desc}</p>
             </div>

@@ -7,7 +7,8 @@ import {
 import App from './App.jsx'
 import Home from './Home/Home';
 import './index.css'
-import Hip from './Home/Hip.jsx';
+import Favourities from './Favourities/Favourities';
+
 
 
 
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
     children: [
 
              {path: "/",element: <Home />},
-             {path: "/fav",element:<Hip /> },
+             {path: "/fav",element: <Favourities />},
 
 
               ]
