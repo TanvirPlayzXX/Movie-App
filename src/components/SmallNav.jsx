@@ -37,7 +37,7 @@ let sData = movies.filter((value)=>{
                         
                         <div className={` ${ de  ? "opacity-100" : "opacity-0" } transition-all absolute bottom-0 right-full  `} >
                         <input  value={s} onChange={(e)=>setS(e.target.value)} type="text" placeholder="Search Here" className="rounded-3xl block p-2 backdrop-blur-md bg-white/5 focus:outline-none" />
-                            <div className={`${s !== "" ? "block" : "hidden"}  absolute top-full p-2 rounded-2xl overflow-y-scroll bg-white text-black h-96 w-full`}>
+                            <div className={`${s !== "" ? "block" : "hidden"} bodys  absolute top-full p-2 rounded-2xl overflow-y-scroll bg-white text-black h-96 w-full`}>
                                 {
                                     sData.map((value,i)=>{
                                         return <div key={i} className="flex cursor-pointer overflow-hidden rounded-2xl text-center  font-Poppins my-1 p-2 bg-slate-200">

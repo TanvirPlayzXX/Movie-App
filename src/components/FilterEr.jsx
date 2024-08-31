@@ -8,7 +8,7 @@ import { movies } from '../../data';
 
 import DramaCard from './DramaCard';
 
-const FilterEr = ({filter,title,type}) => {
+const FilterEr = ({filter,title,typed}) => {
 
 
 
@@ -17,7 +17,7 @@ const FilterEr = ({filter,title,type}) => {
     return v.tag == filter
   });
 
-    if(type == "drama"){
+    if(typed == "drama"){
       
     return (<div className=' mx-20 m-10 z-20 box-border '>
         
@@ -34,9 +34,9 @@ const FilterEr = ({filter,title,type}) => {
 
   {
     movi.map((value,i)=>{
-      if(value.type == type){
+
         return <SwiperSlide key={i} ><DramaCard movie={value} /></SwiperSlide>
-      }
+      
       
     })
   }
@@ -47,13 +47,13 @@ const FilterEr = ({filter,title,type}) => {
 </div> 
 );
     }
-    else if(type == "movie"){
+    else if(typed == "movie"){
       return (<div className=' mx-20 m-10 z-20 box-border '>
         
         <span className='font-Poppins text-3xl text-white font-semibold py-10 block'>{title}</span>
         <Swiper
     slidesPerView={3}
-    spaceBetween={200}
+    spaceBetween={-200}
     pagination={{
       clickable: true,
     }}
@@ -63,9 +63,9 @@ const FilterEr = ({filter,title,type}) => {
   
     {
       movi.map((value,i)=>{
-        if(value.type == type){
+
           return <SwiperSlide key={i} ><MovieCard movie={value} /></SwiperSlide>
-        }
+        
         
       })
     }

@@ -3,7 +3,7 @@ import FilterEr from './../components/FilterEr';
 const Favourities = () => {
     return (
         <div className="py-44">
-                        <FilterEr filter={"trend"} type="drama" title={"Trending"}/>
+                        <FilterEr filter={"trend"} typed="drama" title={"Trending"}/>
         </div>
     );
 };

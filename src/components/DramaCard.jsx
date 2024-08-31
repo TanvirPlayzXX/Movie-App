@@ -7,7 +7,7 @@ const MovieCard = ({movie}) => {
     const {id,img,title,desc} = movie
  
     return (
-        <div className=" cursor-pointer w-72 relative font-Poppins MovieCard overflow-hidden rounded-3xl border-2 border-white bg-red-500 h-[22rem]">
+        <div className=" cursor-pointer w-96 relative font-Poppins MovieCard overflow-hidden rounded-3xl border-2 border-white bg-red-500 h-[22rem]">
             <img className="w-full" src={img} alt="Movie" />
 
                 <MoveLove id={id} />

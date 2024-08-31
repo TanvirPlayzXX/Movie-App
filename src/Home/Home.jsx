@@ -10,8 +10,8 @@ const Home = () => {
             </Movprovider>
 
         {/* Trending Movie  Container */}
-            <FilterEr filter={"trend"} type="movie" title={"Trending"}/>
-            <FilterEr filter={"trend"} type="drama" title={"Trending"}/>
+            <FilterEr filter={"trend"} typed="movie" title={"Trending"}/>
+            <FilterEr filter={"trend"} typed="drama" title={"Trending"}/>
    
         </div>
     );
