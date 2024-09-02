@@ -1,13 +1,10 @@
 import { Outlet } from "react-router-dom";
 import NavBar from './components/NavBar';
 import SmallNav from './components/SmallNav';
-import { useEffect, useRef } from "react";
-
+import { Favprovider } from "./Home/FavContext";
 const App = () => {
 
-  document.onselectstart = ()=>{
-    event.preventDefault()
-  }
+
 
 
   return (
@@ -19,9 +16,12 @@ const App = () => {
 
  
       <div className="basis-[82%] relative h-screen overflow-y-auto scroll-w-0 overflow-x-hidden bodys ">
+      <Favprovider>
       <SmallNav  />
-      <Outlet />
 
+
+      <Outlet />
+      </Favprovider>
       </div>
       </div>
     </div>

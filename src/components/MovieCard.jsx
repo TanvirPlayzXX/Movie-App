@@ -10,7 +10,7 @@ const MovieCard = ({movie}) => {
         <div className=" cursor-pointer w-72 relative font-Poppins MovieCard overflow-hidden rounded-3xl border-2 border-white bg-red-500 h-[22rem]">
             <img className="w-full" src={img} alt="Movie" />
 
-                <MoveLove id={id} />
+                <MoveLove id={id} type="movie"/>
 
             <div className="h-[6rem] p-4 w-[30rem] absolute bottom-0 backdrop-blur-md linear">
         <h2 className=" font-semibold mb-2 text-xl">{title}</h2>
